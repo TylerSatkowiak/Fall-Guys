@@ -1,0 +1,146 @@
+﻿@model Assessment_5_Coffee_Shop.Models.Order
+
+@{
+    ViewData["Title"] = "Order";
+}
+
+
+<h2>Order Now!</h2>
+<br />
+<br />
+<form method="post" action="/home/Receipt">
+
+    Pickup <input type="radio" id="Pickup" name="Option" />
+    Delivery <input type="radio" id="Delivery" name="Option" required/>
+
+    <h3>Draconic Chai Latte:</h3>
+    <img src="/images/dragon.png">
+    <p>
+
+        Our classic Chai Latte with some added 'Dragon' spice for a kick
+    </p>
+    <br />
+    Quantity:
+    <select name="Dragon" id="Dragon">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <br />
+    Size:
+    <select name="DrinkSize1" id="DrinkSize1">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+    </select>
+
+    <br />
+    <br />
+    <h3>Cold Brew Energy Freezie:</h3>
+    <img src="/images/freeze.png">
+    <p>
+
+        Espresso and energy infused Freezie Drink!
+    </p>
+    <br />
+    Quantity:
+    <select name="Freezie" id="Freezie">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <br />
+    Size:
+    <select name="DrinkSize2" id="DrinkSize2">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+    </select>
+    <br />
+    <br />
+    <h3>Classic Burger:</h3>
+    <img src="/images/burger.png">
+    <p>
+
+        Classic yet delicious take on the American cheeseburger, 1 1/2 lb burger /w cheese, lettuce, tomato, onion,
+    </p>
+
+
+    <br />
+    Quantity:
+    <select name="burger" id="burger">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <br />
+    <br />
+
+    <h3>Fries:</h3>
+    <img src="/images/fries.png">
+    <p>
+
+        Lightly salted and steaming hot french fries
+    </p>
+
+    <br />
+    Quantity:
+    <select name="fries" id="fries">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+
+    <br />
+    <br />
+    <br />
+    <!-- Not allowed to order if not signed in, 'created account' first-->
+    <label for="appt">When do you want your food/drinks?:</label>
+
+    <input type="time" id="Time" name="Time"
+           min="09:00" max="18:00" required>
+
+    <small>Restaurant hours are 9am to 6pm</small>
+
+
+    <input type="submit" value="Submit Order" />
+
+
+
+</form>
+
+
+<!--  Menu item with each picture that adds a number 1-10 TIMES an attached $ amount -->
+<!--Maintain a running total, and Date/time-->

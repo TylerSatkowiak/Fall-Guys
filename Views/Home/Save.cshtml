@@ -1,0 +1,17 @@
+﻿@model Assessment_5_Coffee_Shop.Models.WebUser
+
+@{
+    ViewData["Title"] = "Save";
+}
+
+<h2>Your Account has been Created!</h2>
+
+    Welcome, @Model.FirstName @Model.LastName!
+    <br />
+
+    Email Address: @Model.Email
+    <br />
+    Phone: @Model.Phone
+    <br />
+    <br />
+    <input type="button" value="Order Now!" onclick="location.href='@Url.Action("Order", "Home")'" />

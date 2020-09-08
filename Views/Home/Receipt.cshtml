@@ -1,0 +1,67 @@
+﻿@model Assessment_5_Coffee_Shop.Models.Order
+@{
+    ViewData["Title"] = "Receipt";
+}
+
+<h2>Receipt:</h2>
+
+
+Drink Size 1:
+@Model.DrinkSize1
+Drink Size 2:
+@Model.DrinkSize2
+Dragon
+@Model.Dragon
+Freezie
+@Model.Freezie
+Burger
+@Model.Burger
+Fries
+@Model.Fries
+
+<!--
+    
+    TO-DO
+
+    if Pickup -> display user's pickup time only IF longer than 15 minutes past NOW
+
+    if Delivery -> add 30 min to NOW, as long as it's within store hours
+-->
+<!--Not passing 'drink size' into Order Model
+    Not passing 'phone number' into WebUser Model
+
+        Also not sure how to incorporate c# code further to run calculations or
+        have 'objects' able to be added/removed from cart before checkout
+
+        No experience in using DateTime
+
+        not sure how to send information like drinksize1+2 into ModelView
+
+    Add prices to menus and calculator (all c# stuff) to checkout,
+    Generate Order Numbers
+
+    Allow user to go back and add more to order.
+
+    I spent too much time looking up flashy things to do/fixing bugs than actually coding but there were a few concepts I need more time in
+    like:
+        ViewBag
+        Modelview
+        GitHub-push
+        DateTime
+        css
+        objects
+    -->
+
+
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <div class="container">
+        <img class="image-background" src="https://i.imgur.com/JQGaW1u.gif">
+    </div>
+</body>
+</html>

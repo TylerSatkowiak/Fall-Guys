@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h2>Register</h2>
+
+<html>
+<body>
+    <form method="post" action="/home/save">
+        <div class="container">
+            <label for="FirstName">First Name:</label><input type="text" name="firstname" required/>
+            <br />
+            <br />
+            <label for="LastName">Last Name:</label> <input type="text" name="lastname" required/>
+            <br />
+            <br />
+            <label for="Email">Email:</label> <input type="email" name="emailaddress" required/>
+            <br />
+            <br />
+
+            <!-- Phone is not saving or applying to Model!! -->
+            <label for="Phone">Phone:</label>
+            <input type="tel" id="Phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+                   title="Format: XXX-XXX-XXXX"
+                   />
+            <br />
+            <br />
+            <label for="hexId">Password: </label>
+            <input id="myInput" type="password" required pattern="[0-9a-fA-F]{8,20}"
+                   title="8-20 hexadecimal digits"
+                   autocomplete="new-password">
+            <br />
+
+            <input type="checkbox" onclick="myFunction()">Show Password
+
+            <script>
+                function myFunction() {
+                    var x = document.getElementById("myInput");
+                    if (x.type == "password") {
+                        x.type = "text";
+                    }
+                    else {
+                        x.type = "password";
+                    }
+                }
+            </script>
+
+            <br />
+            <br />
+            <input type="submit" value="Create Account"/>
+
+        </div>
+
+    </form>
+
+</body>
+</html>

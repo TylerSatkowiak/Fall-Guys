@@ -1,0 +1,38 @@
+﻿
+body{
+    background-color: midnightblue;
+}
+
+h2 {
+    padding-top: 40px;
+    color: white;
+}
+
+h3 {
+    color: firebrick;
+}
+
+
+p{
+    color: white;
+}
+
+.image-background {
+    opacity: 0.5;
+    height: 100%;
+    width: 100%;
+    padding: 7px;
+}
+
+.container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
